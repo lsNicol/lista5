@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-image: url(../images/charlvera-boat.jpg);
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  align-items: start;
+  justify-content: start;
+  gap: 20px;
+}
+
+div {
+  display: flex;
+  flex-flow: column;
+  margin: 40px 20px;
+  border-radius: 16px;
+  width: 800px;
+  min-height: 600px;
+  padding: 20px;
+  gap: 20px;
+}
+
+.div1 {
+  color: #a0a0a0;
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.div2 {
+  background-color: rgba(220, 0, 0, 0.3);
+}
+
+p {
+  font-size: 22px;
+}
