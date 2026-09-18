@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #c4c4c4;
+  background-image: url("../images/davidG.png");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-attachment: fixed;
+}
+
+main {
+  width: 1400px;
+  margin-left: 800px;
+  padding: 30px;
+}
+
+main h1 {
+  font-size: 50px;
+  color: white;
+  padding: 30px;
+}
+
+main p {
+  font-size: 25px;
+}

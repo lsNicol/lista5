@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1a1a2e;
+  background-image: url("../images/batwall.webp");
+  background-size: 200px;
+}
+
+main {
+  margin: 0 100px;
+  margin-bottom: 50px;
+  height: 100%;
+  background-color: #f2f2f2;
+  background-image: url("../images/batblack.webp");
+  background-repeat: repeat-x;
+  background-size: auto;
+  padding: 30px;
+  padding-top: 350px;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #9256c2;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #9256c2;
+}
+
+main p {
+  margin-top: 30px;
+  line-height: 1.8;
+  font-size: 1.4rem;
+}
+
+div {
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+}
