@@ -1,0 +1,275 @@
+:root{
+  --color-gray-200: #c0c1c2;
+  --color-gray-500: #7a7b7c;
+  --color-gray-750: #3a3a3b;
+  --color-gray-850: #2a2b2c;
+  --color-gray-900: #1e1e1f;
+  --color-gray-950: #121212;
+  --color-gold: #a58148;
+  --color-yellow: #ffd500;
+
+  --bg-page: var(--color-gray-950);
+  --bg-card: var(--color-gray-900);
+  --bg-card-el: var(--color-gray-850);
+  --bg-card-border: var(--color-gray-750);
+  --text-white: #FFF;
+  --text-primary: var(--color-gray-200);
+  --text-second: var(--color-gray-500);
+  --bg-primary: var(--color-yellow);
+  --bg-second: var(--color-gold);
+
+  --body-gutter: clamp(1rem, 4vw, 5rem);
+  --gutter: 1rem;
+  --gutter-2: 2rem;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body{
+  background-color: var(--bg-page);
+  color: var(--text-second);
+  height: 100vh;
+  display: flex;
+  padding: var(--body-gutter);
+  gap: var(--space-5);
+  justify-content: center;
+  font-family: sans-serif;
+}
+.sidebar{
+  padding: var(--gutter) 0;
+  background-color: var(--bg-card);
+  max-width: 360px;
+  width: 20%;
+  height: 90%;
+  border-radius: 22px;
+  border: 1px solid var(--bg-card-border);
+  overflow-y: auto;
+  clip-path: inset(0 round 22px);
+}
+
+
+
+.sidebar::-webkit-scrollbar{
+  width: 8px;
+  object-fit: cover;
+}
+.sidebar::-webkit-scrollbar-thumb{ border-radius: 999px; }
+
+/* [Claude] setinhas de volta nas pontas; o clip-path do .sidebar mantém elas dentro do aside */
+.sidebar::-webkit-scrollbar-button:single-button{
+  display: block;
+  height: 14px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 8px;
+}
+.sidebar::-webkit-scrollbar-button:single-button:vertical:decrement{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath d='M1 6l3-4 3 4z' fill='%237a7b7c'/%3E%3C/svg%3E");
+}
+.sidebar::-webkit-scrollbar-button:single-button:vertical:increment{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath d='M1 2l3 4 3-4z' fill='%237a7b7c'/%3E%3C/svg%3E");
+}
+
+.sidebar::-webkit-scrollbar-track{
+  background: transparent;
+}
+.sidebar::-webkit-scrollbar-thumb{
+  background: var(--color-gray-750);
+}
+.sidebar::-webkit-scrollbar-thumb:hover{
+background: var(--bg-primary);
+}
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+.perfil{
+ gap: var(--space-2);
+ display: flex;
+ flex-flow: column;
+ align-items: center;
+}
+
+.perfil__foto{
+  width: 60%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.perfil__title{
+  color: var(--text-primary);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.perfil__classe{
+  padding: var(--space-2) var(--space-5);
+  background-color: var(--bg-card-el);
+  border-radius: 12px;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+.separador{
+  border-top: 1px solid var(--bg-card-el);
+  width: 85%;
+  margin: var(--space-3);
+}
+
+.contact{
+  padding: var(--gutter-2);
+  padding-top: 0;
+  list-style: none;
+  display: flex;
+  flex: 1;
+  width: auto;
+  flex-flow: column;
+  gap: var(--space-3);
+}
+.contact__item{
+  display: flex;
+  gap: var(--space-3)
+}
+.contact__icon{
+  padding: var(--space-3);
+  color: var(--bg-second);
+  aspect-ratio: 1/1;
+  align-self: flex-start;
+  font-size: 1rem;
+  background-color: var(--bg-card-el);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.contact__info{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  min-width: 0;
+}
+.contact__title{
+  color: var(--text-second);
+}
+.contact__link{
+  text-decoration: none;
+  color: var(--text-primary);
+  overflow-wrap: anywhere;
+}
+
+.social{
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: var(--space-2);
+  justify-content: center;
+  align-items: center;
+}
+.social__item *{
+  color: var(--text-second);
+  font-size: 1.6rem;
+}
+.conteudo{
+  position: relative;
+  width: 50%;
+  background-color: var(--bg-card);
+  border-radius: 22px;
+  border: 1px solid var(--bg-card-border);
+  overflow: hidden;
+}
+.conteudo__header{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.conteudo__descr{
+  padding: var(--space-3);
+  background-color: var(--bg-card-el);
+  width: 55%;
+  border-bottom-left-radius:22px;
+  border: 1px solid var(--color-gray-750);
+  margin: 0;
+}
+.conteudo__descr ul{
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+.conteudo__descr li{
+  position: relative;
+  color: var(--text-primary);
+  padding-bottom: 3px;
+}
+.conteudo__descr li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; /* Espessura da linha */
+  background-color: var(--bg-primary);
+  
+  /* Começa invisível e encolhida no centro */
+  transform: scaleX(0); 
+  transition: transform 0.3s ease-in-out;
+}
+.conteudo__descr li.active::after {
+  transform: scaleX(1);
+}
+.conteudo__descr li.active{
+  color: var(--bg-primary);
+}
+.conteudo__descr li a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  transition: color 0.3s, transform 0.3s;
+}
+.conteudo__descr li:hover a {
+  color: var(--bg-primary);
+  transform: scale(1.1);
+}
+
+.conteudo__descr li.active:hover::after {
+  transform: scaleX(1.1);
+}
+.card__title{
+  padding: var(--space-5) var(--gutter-2) 0;
+  margin: 0;
+  color: var(--text-white);
+  align-self: flex-end;
+}
+.card{
+  padding: var(--gutter) var(--gutter-2);
+  display: flex;
+  flex-flow: column;
+  gap: var(--gutter);
+}
+.conteudo__titulo{
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding-bottom: var(--space-2);
+}
+.conteudo .separador{
+  margin: 0 0 0 var(--gutter-2);
+  width: 32px;
+  border: 2px solid var(--bg-primary);
+  border-radius: 22px;
+}
+.card__bio{
+  color: var(--text-primary)
+}
+

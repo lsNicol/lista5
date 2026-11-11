@@ -4,44 +4,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Meus Exercícios</title>
-  <link href="CSS/index.css" rel="stylesheet">
+  <title>Portfolio</title>
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
-  <header>
-    <h1>Meus Exercícios de HTML & CSS</h1>
-    <p>Estudante: Nicolas Lemes Silva | Turma: Desenvolvimento de Sistemas 1°A</p>
-  </header>
-  <main>
-    <div class="container-execicios">
-      <div>
-        <h3>Exercício 1</h3>
-        <img src="images/tab1.png" alt="Exercício 1">
-        <a href="exercicio1.html" class="botao">Abrir</a>
-      </div>
-      <div>
-        <h3>Exercício 2</h3>
-        <img src="images/tab2.png" alt="Exercício 2">
-        <a href="exercicio2.html" class="botao">Abrir</a>
-      </div>
-      <div>
-        <h3>Exercício 3</h3>
-        <img src="images/tab3.png" alt="Exercício 3">
-        <a href="exercicio3.html" class="botao">Abrir</a>
-      </div>
-      <div>
-        <h3>Exercício 4</h3>
-        <img src="images/tab4.png" alt="Exercício 4">
-        <a href="exercicio4.html" class="botao">Abrir</a>
-      </div>
-      <div>
-        <h3>Exercício 5</h3>
-        <img src="images/tab5.png" alt="Exercício 5">
-        <a href="exercicio5.html" class="botao">Abrir</a>
-      </div>
+  <aside class="sidebar" id="sidebar">
+    <div class="perfil">
+      <img src="musc.jpeg" alt="Foto de perfil" class="perfil__foto">
+      <h2 id="userName" class="perfil__title editavel" contenteditable="true">Nicolas Lemes</h2>
+      <h3 id="classe" class="perfil__classe">Programmer</h3>
+      <div class="separador"></div>
     </div>
+    <ul class="contact">
+      <li class="contact__item">
+        <div class="contact__icon">
+          <ion-icon name="mail-outline"></ion-icon>
+        </div>
+        <div class="contact__info" id="emaildiv">
+          <p class="contact__title">Email</p>
+          <a href="mailto:snicolas.lemes@gmail.com" class="contact__link" id="email">snicolas.lemes@gmail.com</a>
+        </div>
+      </li>
+      <li class="contact__item">
+        <div class="contact__icon">
+          <ion-icon name="phone-portrait-outline"></ion-icon>
+        </div>
+        <span class="contact__info">
+          <p class="contact__title">Phone</p>
+          <a href="tel:+5534997652830" class="contact__link">+55 (34) 99765-2830</a>
+        </span>
+      </li>
+      <li class="contact__item">
+        <div class="contact__icon">
+          <ion-icon name="calendar-outline"></ion-icon>
+        </div>
+        <span class="contact__info">
+          <p class="contact__title">Aniversario</p>
+          <a href="tel:+5534997652830" class="contact__link">10/10/2010</a>
+        </span>
+      </li>
+      <li class="contact__item">
+        <div class="contact__icon">
+          <ion-icon name="location-outline"></ion-icon>
+        </div>
+        <span class="contact__info">
+          <p class="contact__title">Localização</p>
+          <address class="contact__link">Uberlandia (MG), Brasil</address>
+        </span>
+      </li>
+    </ul>
+
+
+    <ul class="social">
+      <li class="social__item">
+        <a href="#" class="social__link">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="#" class="social__link">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="#" class="social__link">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+      </li>
+    </ul>
+  </aside>
+  <main class="conteudo">
+    <div class="conteudo__header">
+      <div class="conteudo__titulo">
+        <h2 class="card__title">Sobre</h2>
+        <div class="separador"></div>
+      </div>
+      <nav class="conteudo__descr">
+        <ul>
+          <li class="active"><a href="#">Sobre</a></li>
+          <li><a href="#">Resumo</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+    <article class="card">
+      <section class="card__bio">
+        <p>Está é minha vida, sla to com preguiça dps o claude completa</p>
+      </section>
+      
+      <section>
+        <h2 class="card__servicos">Oque eu faço</h2>
+        <ul class="servicos__lista">
+          <li class="servicos__item">Desenvolvimento de WebSites</li>
+          <li class="servicos__item">Desenvolvimento de WebSites</li>
+          <li class="servicos__item">Desenvolvimento de WebSites</li>
+          <li class="servicos__item">Desenvolvimento de WebSites</li>
+        </ul>
+      </section>
+    </article>
   </main>
+  <script src="script.js"></script>
 </body>
 
 </html>
